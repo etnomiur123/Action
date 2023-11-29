@@ -1,4 +1,5 @@
 on: [push]
+workflow_dispatch:
 
 jobs:
   hello_world_job:
@@ -9,6 +10,6 @@ jobs:
       - id: foo
         uses: etnomiur123/Composite-Action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
